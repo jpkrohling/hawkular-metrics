@@ -107,7 +107,7 @@ public class AvailabilityHandler {
 
     @GET
     @Path("/")
-    public Response findMetrics(
+    public Response findAvailabilityMetrics(
             @QueryParam("tags") Tags tags) {
 
         Observable<Metric<AvailabilityType>> metricObservable = (tags == null)

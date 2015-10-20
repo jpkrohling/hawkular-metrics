@@ -544,11 +544,11 @@ diff -r '--exclude-from=api/diff-excludes' api/metrics-api-jaxrs/src/main/java/o
 <             @ApiResponse(code = 500, message = "Failed to retrieve metrics due to unexpected error.",
 <                     response = ApiError.class)
 <     })
-<     public void findGuageMetrics(
+<     public void findAvailabilityMetrics(
 <             @Suspended AsyncResponse asyncResponse,
 <             @ApiParam(value = "List of tags filters", required = false) @QueryParam("tags") Tags tags) {
 ---
->     public Response findMetrics(
+>     public Response findAvailabilityMetrics(
 >             @QueryParam("tags") Tags tags) {
 138,148c117,128
 <         metricObservable
@@ -867,11 +867,11 @@ diff -r '--exclude-from=api/diff-excludes' api/metrics-api-jaxrs/src/main/java/o
 <             @ApiResponse(code = 500, message = "Failed to retrieve metrics due to unexpected error.",
 <                     response = ApiError.class)
 <     })
-<     public void findGuageMetrics(
+<     public void findCounterMetrics(
 <             @Suspended AsyncResponse asyncResponse,
 <             @ApiParam(value = "List of tags filters", required = false) @QueryParam("tags") Tags tags) {
 ---
->     public <T> Response findMetrics(
+>     public Response findCounterMetrics(
 >             @QueryParam("tags") Tags tags) {
 145,155c118,129
 <         metricObservable
@@ -1446,11 +1446,11 @@ diff -r '--exclude-from=api/diff-excludes' api/metrics-api-jaxrs/src/main/java/o
 <             @ApiResponse(code = 500, message = "Failed to retrieve metrics due to unexpected error.",
 <                     response = ApiError.class)
 <     })
-<     public void findGuageMetrics(
+<     public void findGaugeMetrics(
 <             @Suspended AsyncResponse asyncResponse,
 <             @ApiParam(value = "List of tags filters", required = false) @QueryParam("tags") Tags tags) {
 ---
->     public Response findMetrics(
+>     public Response findGaugeMetrics(
 >             @QueryParam("tags") Tags tags) {
 141,151c119,130
 <         metricObservable

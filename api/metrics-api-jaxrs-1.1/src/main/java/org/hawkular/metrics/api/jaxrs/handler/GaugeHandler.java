@@ -109,7 +109,7 @@ public class GaugeHandler {
 
     @GET
     @Path("/")
-    public Response findMetrics(
+    public Response findGaugeMetrics(
             @QueryParam("tags") Tags tags) {
 
         Observable<Metric<Double>> metricObservable = (tags == null)

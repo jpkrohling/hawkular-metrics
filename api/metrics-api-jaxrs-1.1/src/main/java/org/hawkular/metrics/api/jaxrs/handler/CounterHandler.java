@@ -108,7 +108,7 @@ public class CounterHandler {
 
     @GET
     @Path("/")
-    public <T> Response findMetrics(
+    public Response findCounterMetrics(
             @QueryParam("tags") Tags tags) {
 
         Observable<Metric<Long>> metricObservable = (tags == null)

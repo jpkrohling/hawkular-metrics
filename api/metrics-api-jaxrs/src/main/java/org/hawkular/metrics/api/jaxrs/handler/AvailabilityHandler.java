@@ -127,7 +127,7 @@ public class AvailabilityHandler {
             @ApiResponse(code = 500, message = "Failed to retrieve metrics due to unexpected error.",
                     response = ApiError.class)
     })
-    public void findGuageMetrics(
+    public void findAvailabilityMetrics(
             @Suspended AsyncResponse asyncResponse,
             @ApiParam(value = "List of tags filters", required = false) @QueryParam("tags") Tags tags) {
 
